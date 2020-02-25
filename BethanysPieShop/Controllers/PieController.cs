@@ -34,9 +34,22 @@ namespace BethanysPieShop.Controllers
             return View(piesListViewModel);
         }
 
+        //public ActionResult Test(Pie pie, Category category)
+        //{
+            //if(pie.CategoryId == category.CategoryId)
+            //{
+            //    categoryName == category.CategoryName;
+            //}
+            //var categoryName = pie.CategoryId
+            //var categorgy = pie.Category.CategoryName;
+            //return RedirectToAction("Details");
+        //}
+
         public IActionResult Details(int id)
         {
+            
             var pie = _pieRespository.GetPieById(id);
+            //Test(pie);
             if(pie == null)
             {
                 return NotFound();
