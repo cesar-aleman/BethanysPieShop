@@ -6,10 +6,13 @@
     <img alt="@Model.Name" src="@Model.ImageUrl">
     <div class="caption-full">
         <h3 class="pull-right">@Model.Price</h3>
-        <h3>
-            <a href="#">@Model.Name</a>
-        </h3>
-        <p> Hello! @Model.CategoryId Hello again </p>
+        <h3><a href="#">@Model.Name</a></h3>
+
+        @{ 
+            string someVar = Model.Category.CategoryName.ToString();
+        }
+
+        <h3> @Model.Category.CategoryName.ToString()</h3>
         <h4>@Model.ShortDescription</h4>
         <p>@Model.LongDescription</p>
         <div class="addToCart">
